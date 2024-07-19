@@ -14,23 +14,23 @@
 
 ClapTrap::ClapTrap(const string name) : _name(name), _hp(10), _enp(10), _dam(0) 
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "ClapTrap default constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& cpy)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "ClapTrap copy constructor called" << std::endl;
 	*this = cpy;
 }
 
 ClapTrap::~ClapTrap() 
 {
-	std::cout << "destructor called" << std::endl;
+	std::cout << "ClapTrap destructor called" << std::endl;
 }
 
 ClapTrap&	ClapTrap::operator=(const ClapTrap& cpy)
 {
-	std::cout << "Copy operator called" << std::endl;
+	std::cout << "ClapTrap copy operator called" << std::endl;
 	this->_name = cpy._name;
 	this->_hp = cpy._hp;
 	this->_enp = cpy._enp;

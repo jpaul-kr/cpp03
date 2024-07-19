@@ -20,9 +20,9 @@ using std::string;
 class ClapTrap
 {
 	public:
-		virtual ClapTrap(const string name);
-		virtual ClapTrap(const ClapTrap& cpy);
-		virtual ~ClapTrap();
+		ClapTrap(const string name);
+		ClapTrap(const ClapTrap& cpy);
+		~ClapTrap();
 
 		ClapTrap&	operator=(const ClapTrap& cpy);
 

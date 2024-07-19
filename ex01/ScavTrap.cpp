@@ -27,9 +27,9 @@ ScavTrap::ScavTrap(const ScavTrap& cpy) : ClapTrap(cpy._name)
 	*this = cpy;
 }
 
-ScavTrap::~ScavTrap() : ~ClapTrap()
+ScavTrap::~ScavTrap()
 {
-	std::cout << "ScavTrap destructor called" << stdd::endl;
+	std::cout << "ScavTrap destructor called" << std::endl;
 }
 
 void	ScavTrap::attack(const string& target)
@@ -41,6 +41,17 @@ void	ScavTrap::attack(const string& target)
 		<< ", causing " << this->_dam << " points of damage!" << std::endl;
 }
 
-void	ScavTrap::gateGuard()
+void	ScavTrap::guardGate()
 {
+	std::cout << "ScavTrap " << this->_name << " is now in Gate keeper mode" << std::endl;
+}
+
+ScavTrap&	ScavTrap::operator=(const ScavTrap& cpy)
+{
+	std::cout << "ScavTrap copy operator called" << std::endl;
+	this->_name = cpy._name;
+	this->_hp = cpy._hp;
+	this->_enp = cpy._enp;
+	this->_dam = cpy._dam;
+	return *this;
 }

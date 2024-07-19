@@ -17,12 +17,13 @@
 class ScavTrap : public ClapTrap
 {
 	public:
-		ScavTrap::ScavTrap(const string name);
-		ScavTrap::ScavTrap(const ScavTrap& cpy);
-		ScavTrap::~ScavTrap();
+		ScavTrap(const string name);
+		ScavTrap(const ScavTrap& cpy);
+		~ScavTrap();
 
-		void	guardGate();
-		void	attack(const string& target) override;
+		void		guardGate();
+		void		attack(const string& target);
+		ScavTrap&	operator=(const ScavTrap& cpy);
 };
 
 
