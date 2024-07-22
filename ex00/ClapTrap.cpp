@@ -6,15 +6,20 @@
 /*   By: jpaul-kr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 11:52:13 by jpaul-kr          #+#    #+#             */
-/*   Updated: 2024/07/19 11:52:17 by jpaul-kr         ###   ########.fr       */
+/*   Updated: 2024/07/22 12:01:36 by jpaul-kr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(const string name) : _name(name), _hp(10), _enp(10), _dam(0) 
+ClapTrap::ClapTrap() : _hp(10), _enp(10), _dam(0) 
 {
 	std::cout << "Default constructor called" << std::endl;
+}
+
+ClapTrap::ClapTrap(const string name) : _name(name), _hp(10), _enp(10), _dam(0) 
+{
+	std::cout << "Init constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& cpy)
