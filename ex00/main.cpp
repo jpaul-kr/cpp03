@@ -6,7 +6,7 @@
 /*   By: jpaul-kr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 11:52:30 by jpaul-kr          #+#    #+#             */
-/*   Updated: 2024/07/22 11:39:09 by jpaul-kr         ###   ########.fr       */
+/*   Updated: 2024/07/19 11:52:32 by jpaul-kr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,18 @@ int	main()
 	while (a.getHp() && b.getHp())
 	{
 		a.attack(b.getName());
-		b.takeDamage(a.getDamage());
+		if (a.getHp())
+			b.takeDamage(a.getDamage());
 
 		b.attack(a.getName());
-		a.takeDamage(b.getDamage());
+		if (b.getHp())
+			a.takeDamage(b.getDamage());
 		if (!a.getEnp() && !b.getEnp())
 		{
 			std::cout << "this ends in a tie!" << std::endl;
 			return 0;
 		}
-		//a.beRepaired(2);
+		//a.beRepaired(3);
 		//b.beRepaired(1);
 	}
 	return 0;

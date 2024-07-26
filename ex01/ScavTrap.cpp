@@ -6,7 +6,7 @@
 /*   By: jpaul-kr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 11:53:14 by jpaul-kr          #+#    #+#             */
-/*   Updated: 2024/07/22 11:55:42 by jpaul-kr         ###   ########.fr       */
+/*   Updated: 2024/07/19 12:58:45 by jpaul-kr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 ScavTrap::ScavTrap() : ClapTrap() 
 {
 	std::cout << "ScavTrap default constructor called" << std::endl;
-	_name = name;
 	_hp = 100;
 	_enp = 50;
 	_dam = 20;

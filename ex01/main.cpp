@@ -27,8 +27,5 @@ int	main()
 	b.attack(a.getName());
 
 	b.guardGate();
-
-	//a.setEnp(30);
-	//b.setEnp(30);
 	return 0;
 }

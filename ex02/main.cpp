@@ -26,6 +26,7 @@ int	main()
 	a.takeDamage(c.getDamage());
 	a.attack(c.getName());
 
+	std::cout << std::endl;
 	//b.setEnp(30);
 	//c.setEnp(30);
 	while (c.getHp() && b.getHp())
