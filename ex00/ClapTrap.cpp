@@ -6,7 +6,7 @@
 /*   By: jpaul-kr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 11:52:13 by jpaul-kr          #+#    #+#             */
-/*   Updated: 2024/07/19 11:52:17 by jpaul-kr         ###   ########.fr       */
+/*   Updated: 2024/08/01 11:48:59 by jpaul-kr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	if (!this->_hp)
 		return ;
 	this->_hp <= amount ? this->_hp = 0 : this->_hp -= amount;
-	std::cout << this->_name << " takes " << amount << " damage," \
+	std::cout << "ClapTrap " << this->_name << " takes " << amount << " damage," \
 		<< " has " << this->_hp << " hitpoints left" << std::endl;
 }
 
@@ -67,7 +67,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 		return ;
 	this->_hp += amount;
 	this->_enp--;
-	std::cout << this->_name << " recovers " << amount << " hitpoints" \
+	std::cout << "ClapTrap " << this->_name << " recovers " << amount << " hitpoints" \
 		<< " now he has " << this->_hp << "!!" << std::endl;
 }
 
@@ -76,7 +76,7 @@ void	ClapTrap::setDamage(unsigned int amount)
 	this->_dam = amount;
 }
 
-unsigned int	ClapTrap::getDamage()
+unsigned int	ClapTrap::getDamage() const
 {
 	return this->_dam;
 }
@@ -86,7 +86,7 @@ void	ClapTrap::setHp(unsigned int amount)
 	this->_hp = amount;
 }
 
-unsigned int	ClapTrap::getHp()
+unsigned int	ClapTrap::getHp() const
 {
 	return this->_hp;
 }
@@ -96,7 +96,7 @@ void	ClapTrap::setName(const string name)
 	this->_name = name;
 }
 
-string	ClapTrap::getName()
+string	ClapTrap::getName() const
 {
 	return this->_name;
 }
@@ -106,7 +106,7 @@ void	ClapTrap::setEnp(unsigned int amount)
 	this->_enp = amount;
 }
 
-unsigned int	ClapTrap::getEnp()
+unsigned int	ClapTrap::getEnp() const
 {
 	return this->_enp;
 }

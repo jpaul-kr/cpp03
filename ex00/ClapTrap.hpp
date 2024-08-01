@@ -6,7 +6,7 @@
 /*   By: jpaul-kr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 11:52:37 by jpaul-kr          #+#    #+#             */
-/*   Updated: 2024/07/19 11:52:40 by jpaul-kr         ###   ########.fr       */
+/*   Updated: 2024/08/01 11:46:48 by jpaul-kr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,15 @@ class ClapTrap
 		void		attack(const string& target);
 		void		takeDamage(unsigned int amount);
 		void		beRepaired(unsigned int amount);
+
 		void		setDamage(unsigned int amount);
-		unsigned int	getDamage();
+		unsigned int	getDamage() const;
 		void		setHp(unsigned int amount);
-		unsigned int	getHp();
+		unsigned int	getHp() const;
 		void		setName(const string amount);
-		string		getName();
+		string		getName() const;
 		void		setEnp(unsigned int amount);
-		unsigned int	getEnp();
+		unsigned int	getEnp() const;
 
 	private:
 		string		_name;
